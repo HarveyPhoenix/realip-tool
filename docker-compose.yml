@@ -1,0 +1,11 @@
+version: "3"
+services:
+  realip:
+    image: harveyphoenix/realip-tool:latest
+    ports:
+      - "127.0.0.1:8001:8080"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200k"
+        max-file: "10"
