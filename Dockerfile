@@ -15,6 +15,7 @@ RUN pip install -r /tmp/requirements.txt
 RUN adduser --disabled-password --quiet apprunner
 USER apprunner
 RUN mkdir -p /home/apprunner/running
+RUN mkdir -p /home/apprunner/running/temp
 ADD ./realip /home/apprunner/running/realip
 WORKDIR /home/apprunner/running
 
